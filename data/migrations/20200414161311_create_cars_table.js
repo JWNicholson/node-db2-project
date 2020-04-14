@@ -12,7 +12,7 @@ exports.up = function(knex) {
 
         table.decimal('Miles', )
             .notNullable();
-            
+
         //VIN could be indexed for faster search
         table.decimal('VIN')
             .notNullable();
