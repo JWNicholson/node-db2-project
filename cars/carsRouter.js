@@ -64,6 +64,27 @@ router.put('/:id', (req, res) => {
             console.log(err)
             res.status(500).json({ error: 'Failed to update car' })
         })
-})
+});
+
+// router.delete('/:id', (req,res) => {
+//     db('cars')
+//         .where({id: req.params.id})
+//         .remove(req.params.id)
+//         .then(code => {
+//             if (code === undefined) {
+//               res
+//                 .status(202)
+//                 .json({ message: "This car has been successfully deleted." });
+//             } else {
+//               res.status(404).json({ message: "There isn't a car with this id." });
+//             }
+//           })
+//           .catch(err => {
+//             res
+//               .status(500)
+//               .json({ message: "There was an error deleting this car." });
+//           });
+// });
+
 
 module.exports = router;
